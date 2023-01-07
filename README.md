@@ -9,3 +9,5 @@ A game developed using the django framework, in which you can control the moveme
 **Flash-move**: Keyboard F + left mouse button
 
 **Chat-window**: Keyboard Enter: open Keyboard Esc: close
+
+You can play [here](https://app3738.acapp.acwing.com.cn/).
