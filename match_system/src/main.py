@@ -102,21 +102,21 @@ class MatchHandler:
         queue.put(player)
         return 0
 
-def get_player_from_queue():
-    try:
-        return queue.get_nowait()
-    except:
-        return None 
+    def get_player_from_queue():
+        try:
+            return queue.get_nowait()
+        except:
+            return None 
 
-def worker():
-    pool = Pool()
-    while True:
-        player = get_player_from_queue()
-        if player:
-            pool.add_player(player)
-        else:
-            pool.match()
-            sleep(1)
+    def worker():
+        pool = Pool()
+        while True:
+            player = get_player_from_queue()
+            if player:
+                pool.add_player(player)
+            else:
+                pool.match()
+                sleep(1)
 
 
 if __name__ == '__main__':
