@@ -21,7 +21,7 @@ from acapp.asgi import channel_layer
 from asgiref.sync import async_to_sync
 from django.core.cache import cache
 
-queue = Queue() #消息队列
+queue = Queue() #information queue
 
 class Player:
     def __init__(self, score, uuid, username, photo, channel_name):
@@ -30,7 +30,7 @@ class Player:
         self.username = username
         self.photo = photo
         self.channel_name = channel_name
-        self.waiting_time = 0 #等待时间
+        self.waiting_time = 0 #waiting time
 
 class Pool:
     def __init__(self):
